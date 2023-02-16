@@ -1,0 +1,61 @@
+/* @todo Responsive design */
+#post-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: blurIn;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+#post-wrapper.closing {
+    animation-name: blurOut;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+#post-container {
+    background: #2f1e2e;
+    padding: 30px;
+    border-radius: 10px;
+    outline: 6px solid rgba(47, 30, 46, 0.75);
+    animation-name: scaleIn;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+}
+
+#post-container.closing {
+    animation-name: scaleOut;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+h2 {
+    margin: 0 0 0.55em;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes scaleOut {
+    from { transform: scale(1); }
+    to { transform: scale(0); }
+}
+
+@keyframes blurIn {
+    from { backdrop-filter: blur(0px); }
+    to { backdrop-filter: blur(5px); }
+}
+
+@keyframes blurOut {
+    from { backdrop-filter: blur(5px); }
+    to { backdrop-filter: blur(0px); }
+}

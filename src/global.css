@@ -1,0 +1,46 @@
+html {
+    --site-bg: #592961;
+    --site-fg: #faa2be;
+    --site-secondary: #875590;
+    --h-colors: #EF6994;
+    --container-width: 720px;
+}
+
+body {
+    background: var(--site-bg);
+    color: var(--site-fg);
+    font-family: 'Share Tech Mono', monospace;
+}
+
+h1 {
+    font-family: 'Chewy', cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--h-colors);
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: var(--h-colors);
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h2, h3 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+}
+
+/* need reset */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}

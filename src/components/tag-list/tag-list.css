@@ -1,0 +1,8 @@
+.tags {
+    list-style: none;
+}
+
+.tag {
+    display: inline;
+    margin-right: 5px;
+}

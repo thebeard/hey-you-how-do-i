@@ -1,0 +1,46 @@
+#username-prompt-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: var(--site-bg);
+}
+
+#username-prompt-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+label {
+    font-family: 'Chewy', cursive;
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+input {
+    line-height: 2em;
+    font-size: 1.7rem;
+    text-align: center;
+    background: var(--site-fg);
+    color: var(--site-bg);
+    border: 0;
+    border-radius: 15px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+}
+
+input::placeholder {
+    color: var(--site-secondary);
+}
+
+input:hover,
+input:active,
+input:focus {
+    border: 0;
+    outline: 0;
+}
