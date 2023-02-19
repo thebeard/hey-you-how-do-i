@@ -1,0 +1,48 @@
+ol {
+  counter-reset: item;
+  margin: 2em 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+li {
+  white-space: pre;
+
+  &::before {
+    display: inline-block;
+    content: counter(item) ": ";
+    counter-increment: item;
+    width: 2.5em;
+    margin-right: 0.5em;
+    color: #6b4c6a;
+    text-align: right;
+  }
+
+  &:not(.comment) {
+    .keyword {
+      color: #f3c8d6;
+    }
+
+    .operator {
+      color: salmon;
+    }
+
+    .function {
+      color: #cf2ec2;
+    }
+
+    .punctuation {
+      color: peru;
+    }
+  }
+
+  &::marker {
+    color: transparent;
+  }
+}
+
+li.comment,
+span.comment {
+  color: var(--site-secondary);
+}
