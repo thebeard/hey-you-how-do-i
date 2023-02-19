@@ -1,9 +1,6 @@
-import { component$, useClientEffect$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import { loader$ } from "@builder.io/qwik-city";
-import type { DocumentHead } from "@builder.io/qwik-city";
-
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import ts from "react-syntax-highlighter/dist/cjs/languages/hljs/typescript";
+import type { DocumentHead } from "@builder.io/qwik-city"; // import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 import { getPostSummaries } from "../modules/post";
 import Main from "../components/main/main";
@@ -15,15 +12,6 @@ export const loadUsername = loader$(
 );
 
 export default component$(() => {
-  // We load this eagerly as a user will never use the site without
-  // the syntax highlighter, requiring multiple chunks to download
-  useClientEffect$(
-    () => {
-      SyntaxHighlighter.registerLanguage("typescript", ts);
-    },
-    { eagerness: "idle" }
-  );
-
   const user = loadUsername.use(),
     { value: posts } = loadPostSummaries.use();
 

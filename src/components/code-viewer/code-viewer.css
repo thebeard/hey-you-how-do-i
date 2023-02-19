@@ -1,0 +1,31 @@
+li {
+    white-space: pre;
+}
+
+li:not(.comment) .keyword {
+    color: #fff;
+}
+
+li:not(.comment) .operator {
+    color: salmon;
+}
+
+li:not(.comment) .function {
+    color: green;
+}
+
+li:not(.comment) .parameter {
+    color: blue;
+}
+
+li:not(.comment) .punctuation {
+    color: peru;
+}
+
+li::marker {
+    color: #fff;
+}
+
+li.comment, span.comment {
+    opacity: 0.5;
+}
